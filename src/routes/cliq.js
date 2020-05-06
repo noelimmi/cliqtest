@@ -18,7 +18,7 @@ router.post("/callback", (req, res) => {
   });
 });
 
-router.post("/convert2jsobject", (req, res) => {
+router.post("/convert2jsobject", (req, res, next) => {
   try {
     const {
       data
@@ -35,6 +35,7 @@ router.post("/convert2jsobject", (req, res) => {
       status: 500,
       message: "Internal server error"
     })
+    next(error)
   }
 });
 
