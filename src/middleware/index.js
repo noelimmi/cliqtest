@@ -11,8 +11,7 @@ import config from "config"
 
 const airbrake = new Notifier({
   projectId: config.get("AIRBRAKE_PROJECT_ID"),
-  projectKey: config.get("AIRBRAKE_PROJECT_KEY"),
-  environment: config.get("AIRBRAKE_ENVIRONMENT"),
+  projectKey: config.get("AIRBRAKE_PROJECT_KEY")
 });
 
 export default app => {
