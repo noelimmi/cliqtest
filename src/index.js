@@ -3,7 +3,8 @@ import middleware from "./middleware";
 import cliq from "./routes/cliq";
 import path from "path";
 import {
-  makeErrorHandler
+  makeErrorHandler,
+  makeMiddleware
 } from "@airbrake/node/dist/instrumentation/express";
 import {
   Notifier
